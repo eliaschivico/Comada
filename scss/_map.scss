@@ -1,0 +1,15 @@
+$colors: (
+  light: #ccc,
+  dark: #000
+);
+ 
+$brand-colors: (
+  main: red,
+  alternative: blue
+);
+ 
+$merged: map-merge($colors, $brand-colors);
+ 
+.element {
+  content: map-get($merged, alternative);
+}
